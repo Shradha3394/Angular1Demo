@@ -28,6 +28,13 @@ namespace AngularTestApp
                       "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include("~/Scripts/angular.min.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                "~/app/app.module.js",
+                "~/app/app.constant.js",
+                "~/app/app.service.js",
+                "~/app/app.controller.js"));
+            BundleTable.EnableOptimizations = true;
         }
     }
 }
